@@ -1,81 +1,240 @@
+<!-- ===================== index.html ===================== -->
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <title>ContextRAG</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 
 <body>
 
-<header>
+<div class="announcement">
+    ContextRAG is currently under active development — follow the journey.
+</div>
+
+<header class="hero">
+
     <img src="logo.png" class="logo">
 
     <h1>ContextRAG</h1>
+
+    <p class="tagline">
+        Give LLMs the Context They Need
+    </p>
+
+    <p class="subtitle">
+        A Context Extension Platform for AI Systems
+    </p>
+
+    <p class="status">
+        Currently under active development
+    </p>
+
+    <p class="hero-description">
+        ContextRAG gives AI systems awareness of your project by retrieving
+        project documentation, architecture knowledge and developer
+        conversations before generating responses.
+    </p>
+
+    <div class="hero-buttons">
+
+        <a href="whitepaper.pdf" class="btn">Whitepaper</a>
+
+        <a href="architecture.pdf" class="btn">Architecture</a>
+
+        <a href="playbook.pdf" class="btn">System Design</a>
+
+    </div>
+
 </header>
 
-<section class="about">
 
-    <h2>What is ContextRAG?</h2>
+<section class="what">
 
-    <p>
-        ContextRAG is a context extension platform that enhances interactions with
-        Large Language Models by retrieving project-specific knowledge before sending prompts to the model.
-    </p>
+    <h2>What ContextRAG Does</h2>
 
     <p>
-        It allows developers to interact with AI systems that understand their
-        documentation, architecture, codebase, and past conversations.
+        ContextRAG sits between developers and Large Language Models.
+        It retrieves relevant project knowledge and augments prompts so AI
+        systems can generate responses grounded in real project context.
     </p>
+
+    <div class="flow">
+        Developer → ContextRAG → LLM → Context‑Aware Answer
+    </div>
 
 </section>
+
+
+<section class="problem">
+
+    <h2>The Problem</h2>
+
+    <p>
+        Large Language Models like ChatGPT, Claude, and Gemini lack awareness
+        of the developer’s project environment.
+    </p>
+
+    <ul>
+
+        <li>LLMs do not know your codebase</li>
+        <li>Context must be copied manually</li>
+        <li>Architectural discussions are lost</li>
+        <li>AI responses lack project grounding</li>
+
+    </ul>
+
+</section>
+
 
 <section class="architecture">
 
-    <h2>Architecture</h2>
+    <h2>ContextRAG Architecture</h2>
 
-    <p>
-        ContextRAG uses Retrieval Augmented Generation (RAG) to combine vector search,
-        conversation memory, and developer knowledge ingestion.
+    <img src="ContextRAG-docs/architecture.png" class="architecture-image">
+
+    <p class="explanation">
+        ContextRAG retrieves project knowledge from a vector database and combines
+        it with user queries before sending prompts to LLMs. This enables AI
+        systems to generate responses grounded in real project context.
     </p>
 
-    <img src="architecture.png" class="diagram">
-
 </section>
+
 
 <section class="features">
 
     <h2>Key Features</h2>
 
-    <ul>
-        <li>Multi-LLM Support (OpenAI, Claude, Gemini, Ollama)</li>
-        <li>Project Knowledge Retrieval</li>
-        <li>Conversation Memory Loop</li>
-        <li>Kafka Event-Driven Ingestion</li>
-        <li>Vector Database Search (Weaviate)</li>
-        <li>IDE Plugin Support</li>
-    </ul>
+    <div class="feature-grid">
+
+        <div class="card">
+            <h3>Multi‑LLM Support</h3>
+            <p>Use OpenAI, Claude, Gemini or local models via Ollama.</p>
+        </div>
+
+        <div class="card">
+            <h3>Vector Knowledge Retrieval</h3>
+            <p>Project documentation and code become searchable context.</p>
+        </div>
+
+        <div class="card">
+            <h3>Conversation Memory</h3>
+            <p>Developer discussions become structured knowledge.</p>
+        </div>
+
+        <div class="card">
+            <h3>Event Driven Architecture</h3>
+            <p>Kafka pipelines ingest documentation, repositories and logs.</p>
+        </div>
+
+    </div>
 
 </section>
+
 
 <section class="docs">
 
     <h2>Documentation</h2>
 
-    <a href="whitepaper.pdf" class="btn">Whitepaper</a>
+    <div class="docs-buttons">
 
-    <a href="architecture.pdf" class="btn">Architecture</a>
+        <a href="whitepaper.pdf" class="btn">Read Whitepaper</a>
 
-    <a href="playbook.pdf" class="btn">System Design</a>
+        <a href="architecture.pdf" class="btn">Architecture Book</a>
+
+        <a href="playbook.pdf" class="btn">System Design Playbook</a>
+
+    </div>
 
 </section>
+
+
+<!-- Surprise Section 1: Developer Example -->
+<section class="example">
+
+    <h2>Example Question</h2>
+
+    <div class="example-box">
+
+        <p class="question">Developer asks:</p>
+
+        <p class="query">"How does the Kafka ingestion pipeline work in this project?"</p>
+
+        <p class="answer">
+            ContextRAG retrieves architecture documentation and past developer
+            conversations, augments the prompt, and allows the LLM to generate
+            an answer grounded in real project knowledge.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Surprise Section 2: Build In Public -->
+<section class="build">
+
+    <h2>Building ContextRAG in Public</h2>
+
+    <p>
+        This project is being built step‑by‑step in public. Follow the
+        journey as the platform evolves from prototype to full developer
+        intelligence system.
+    </p>
+
+    <ul class="timeline">
+        <li>Architecture design</li>
+        <li>RAG prototype</li>
+        <li>Knowledge ingestion pipeline</li>
+        <li>Conversation memory</li>
+        <li>Developer platform</li>
+    </ul>
+
+</section>
+
+
+<!-- Surprise Section 3: Follow Development -->
+<section class="community">
+
+    <h2>Follow Development</h2>
+
+    <p>
+        ContextRAG is currently being built. Follow development and explore
+        related projects.
+    </p>
+
+    <a href="https://github.com/Nish-Hub" class="btn">View GitHub</a>
+
+</section>
+
+
+<section class="vision">
+
+    <h2>The Vision</h2>
+
+    <p>
+        ContextRAG aims to become the contextual intelligence layer for AI
+        systems — allowing AI to understand software architectures,
+        codebases, developer discussions and production systems.
+    </p>
+
+</section>
+
 
 <footer>
 
     <p>ContextRAG — Give LLMs the Context They Need</p>
 
-    <p>© 2026 ContextRAG</p>
+    <p>contextrag.dev</p>
 
 </footer>
 
 </body>
+
 </html>
+
